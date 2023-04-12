@@ -2,6 +2,9 @@ package Seminar7.model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+/*
+выполняет логирование
+ */
 
 public class ConsoleLogs {
     WriteIntoFile writeIntoFile = new WriteFile();

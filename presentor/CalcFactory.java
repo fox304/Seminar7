@@ -2,9 +2,11 @@ package Seminar7.presentor;
 
 import Seminar7.model.ICalculable;
 import Seminar7.view.IViewCalc;
-
+/*
+презентор
+ */
 public class CalcFactory {
-    private ICalculable iCalculable;
+    private final ICalculable iCalculable;
     private IViewCalc iViewCalc;
 
     public CalcFactory(ICalculable iCalculable, IViewCalc iViewCalc) {
@@ -13,7 +15,7 @@ public class CalcFactory {
         iViewCalc.getCalcFactory(this);
     }
 
-    public void initFirstNumber(int first) {
+    public void initFirstNumber(double first) {
         iCalculable.setFirstArg(first);
     }
 

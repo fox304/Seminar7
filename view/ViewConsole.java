@@ -9,8 +9,8 @@ import java.util.Scanner;
 
 public class ViewConsole implements IViewCalc {
 
-    CalcFactory calcFactory;
-    MenuConsole menuConsole;
+    private CalcFactory calcFactory;
+    private final MenuConsole menuConsole;
     private static boolean stopProg = true;
 
     public static void setStopProg(boolean stopProg) {
@@ -36,7 +36,7 @@ public class ViewConsole implements IViewCalc {
         menuConsole.initCommands();
 
         System.out.println("введите первое число:");
-        int first = scanner.nextInt();
+        double first = scanner.nextDouble();
 
         calcFactory.initFirstNumber(first);
 

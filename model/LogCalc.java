@@ -1,9 +1,11 @@
 package Seminar7.model;
-
+/*
+реализует вариант подсчета с логированием
+ */
 public class LogCalc implements ICalculable {
-    ConsoleLogs consoleLogs = new ConsoleLogs();
+    private final ConsoleLogs consoleLogs = new ConsoleLogs();
     private final StringBuffer stringBuffer = new StringBuffer();
-    int res;
+    double res;
 
 
     @Override
@@ -36,7 +38,7 @@ public class LogCalc implements ICalculable {
     }
 
     @Override
-    public void setFirstArg(int firstArg) {
+    public void setFirstArg(double firstArg) {
         stringBuffer.append(firstArg);
         res = firstArg;
     }

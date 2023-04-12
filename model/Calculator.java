@@ -1,9 +1,9 @@
 package Seminar7.model;
 
 public class Calculator implements ICalculable {
-    private int firstArg;
+    private double firstArg;
 
-    public void setFirstArg(int firstArg) {
+    public void setFirstArg(double firstArg) {
         this.firstArg = firstArg;
     }
 
