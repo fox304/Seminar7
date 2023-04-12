@@ -1,6 +1,6 @@
 package Seminar7.model;
 
-public class Calculator implements ICalculable{
+public class Calculator implements ICalculable {
     private int firstArg;
 
     public void setFirstArg(int firstArg) {
@@ -8,32 +8,27 @@ public class Calculator implements ICalculable{
     }
 
     @Override
-    public ICalculable sum(int x) {
-        firstArg+=x;
-        return null;
+    public void sum(int x) {
+        firstArg += x;
     }
 
     @Override
-    public ICalculable multiplier(int x) {
-        firstArg*=x;
-        return null;
+    public void multiplier(int x) {
+        firstArg *= x;
     }
 
     @Override
-    public ICalculable subtruction(int x) {
-        firstArg-=x;
-        return null;
+    public void subtruction(int x) {
+        firstArg -= x;
     }
 
     @Override
-    public ICalculable division(int x) {
-        firstArg/=x;
-        return null;
+    public void division(int x) {
+        firstArg /= x;
     }
 
     @Override
-    public double getResult() {
-        System.out.printf("ваш результат %s\n",firstArg);
-        return firstArg;
+    public void getResult() {
+        System.out.printf("ваш результат %s\n", firstArg);
     }
 }

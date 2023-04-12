@@ -3,7 +3,7 @@ package Seminar7.presentor;
 import Seminar7.model.ICalculable;
 import Seminar7.view.IViewCalc;
 
-public class CalcFactory{
+public class CalcFactory {
     private ICalculable iCalculable;
     private IViewCalc iViewCalc;
 
@@ -12,28 +12,33 @@ public class CalcFactory{
         this.iViewCalc = iViewCalc;
         iViewCalc.getCalcFactory(this);
     }
-    public void initFirstNumber(int first){
+
+    public void initFirstNumber(int first) {
         iCalculable.setFirstArg(first);
     }
 
-    public void sum(int arg){
+    public void sum(int arg) {
         iCalculable.sum(arg);
     }
-    public void multiplier(int arg){
+
+    public void multiplier(int arg) {
         iCalculable.multiplier(arg);
 
     }
-    public void subtruction(int arg){
+
+    public void subtruction(int arg) {
         iCalculable.subtruction(arg);
     }
-    public void division(int arg){
+
+    public void division(int arg) {
         iCalculable.division(arg);
     }
-    public double getResult(){
 
-        return iCalculable.getResult();
+    public void getResult() {
+        iCalculable.getResult();
     }
-    public boolean end(){
+
+    public boolean end() {
         return false;
     }
 

@@ -1,6 +1,6 @@
 package Seminar7.view.commands;
 
-public class Plus extends ListCommands{
+public class Plus extends ListCommands {
 
     @Override
     public String toString() {

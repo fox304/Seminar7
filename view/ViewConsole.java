@@ -7,7 +7,7 @@ import Seminar7.view.menu.MenuConsole;
 
 import java.util.Scanner;
 
-public class ViewConsole implements IViewCalc{
+public class ViewConsole implements IViewCalc {
 
     CalcFactory calcFactory;
     MenuConsole menuConsole;
@@ -45,28 +45,32 @@ public class ViewConsole implements IViewCalc{
             int nextArg;
             menuConsole.optionMenu();  // печать меню
             ListCommands numberOfCommand = menuConsole.choise(); // выбор команды
-            if(numberOfCommand instanceof End) {
+            if (numberOfCommand instanceof End) {
                 nextArg = menuConsole.getList().indexOf(numberOfCommand);
-            }
-            else {
+                numberOfCommand.launch((nextArg));
+            } else {
                 System.out.println("введите следующий аргумент");
                 nextArg = scanner.nextInt();
+                numberOfCommand.launch(nextArg);
+                calcFactory.getResult();
             }
-            numberOfCommand.launch(nextArg);
-            calcFactory.getResult();
+
 
         }
     }
+
     private String prompt(String message) {
         Scanner in = new Scanner(System.in);
         System.out.print(message);
         return in.nextLine();
     }
+
     private int promptInt(String message) {
         Scanner in = new Scanner(System.in);
         System.out.print(message);
         return Integer.parseInt(in.nextLine());
     }
+
 
 
 }

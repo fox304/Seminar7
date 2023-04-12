@@ -1,6 +1,6 @@
 package Seminar7.view.commands;
 
-public class Minus extends ListCommands{
+public class Minus extends ListCommands {
 
 
     @Override
