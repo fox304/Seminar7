@@ -9,8 +9,11 @@ import Seminar7.view.ViewConsole;
 public class Main {
     public static void main(String[] args) {
         IViewCalc iViewCalc = new ViewConsole();
-//        CalcFactory calcFactory = new CalcFactory(new Calculator(),iViewCalc);
-        CalcFactory calcFactory = new CalcFactory(new LogCalc(), iViewCalc);
+
+        // раскомментируйте 15 и закомментируйте 16 строку для простого калькулятора
+
+//        CalcFactory calcFactory = new CalcFactory(new Calculator(),iViewCalc);//простой калкулятор
+        CalcFactory calcFactory = new CalcFactory(new LogCalc(), iViewCalc); // добавлено логирование и запись в файл
 
         iViewCalc.start();
     }
